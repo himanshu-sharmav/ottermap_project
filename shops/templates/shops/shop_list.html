@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop List</title>
+</head>
+<body>
+    <h1>Registered Shops</h1>
+    <ul>
+        {% for shop in shops %}
+            <li>{{ shop.name }} (Lat: {{ shop.latitude }}, Long: {{ shop.longitude }})</li>
+        {% empty %}
+            <li>No shops found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'search_shops' %}">Search for Nearby Shops</a>
+    <a href="{% url 'register_shop' %}">Register a new shop</a> <!-- Link to shop registration -->
+    <a href="{% url 'home' %}">Return to home</a>
+
+</body>
+</html>

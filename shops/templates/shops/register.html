@@ -1,0 +1,12 @@
+<h2>Register a Shop</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+<a href="{% url 'shop_list' %}">Shops List</a>
+<a href="{% url 'search_shops' %}">Search for Nearby Shops</a>
+<a href="{% url 'home' %}">Return to home</a>
+
+<!-- <a href="{% url 'register_shop' %}">Register a new shop</a>  -->
+

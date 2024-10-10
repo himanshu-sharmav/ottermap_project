@@ -1,0 +1,12 @@
+<h2>Search Results</h2>
+<ul>
+    {% for shop, distance in shop_distances %}
+    <li>{{ shop.name }} - {{ distance }} km away</li>
+    {% endfor %}
+    <!-- <a href="{% url 'search_shops' %}">Search for Nearby Shops</a>  -->
+    <a href="{% url 'search_shops' %}">Search for Nearby Shops</a>
+    <a href="{% url 'register_shop' %}">Register a new shop</a> <!-- Link to shop registration -->
+    <a href="{% url 'home' %}">Return to home</a>
+
+</body>
+</ul>
